@@ -1,0 +1,229 @@
+.loginContainer {
+    background: url(../../assets/img/background.png) no-repeat center center fixed;
+    min-height:100%;
+  /* background:linear-gradient(0deg, rgba(94, 90, 92, 0.3), rgba(70, 67, 69, 0.3)), url(../../assets/img/background.png); */
+  
+}
+
+/* css for sign-in and new-registration page*/
+/* number details section */
+.signInContainer {
+    width: 384px;
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    top: 30px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.grytLogo {
+    display: block;
+    margin: auto;
+    margin-top: 28px;
+    height: 140px;
+}
+
+#countryCode {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    padding: 10px;
+    background: none;
+    color: #6A6A6A;
+    border-bottom-color: #6A6A6A;
+    margin-top: 30px;
+}
+
+.loginText {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    padding: 10px;
+    color: #6A6A6A;
+    margin-top: 30px;
+  }
+
+.continueButton {
+    display: block;
+    margin: auto;
+    width: 327px;
+    height: 48px;
+    background: #6A6A6A 0% 0% no-repeat padding-box;
+    border-radius: 50px;
+    border: 0;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.termsCondition {
+    color: #6A6A6A;
+    letter-spacing: 0;
+    text-align: left;
+    margin-top: 30px;
+
+}
+
+.highlightColor {
+    color: #00D1B7;
+    cursor: pointer;
+}
+
+.signInWith {
+    color: #2F2F2F;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.signVia {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 17px;
+}
+.newRegister {
+    margin-top: 30px;
+    color: #919191;
+}
+
+/* otp detail section */
+.otpHeader {
+    text-align: left;
+}
+
+.backArrow {
+    color: #231F20;
+    cursor: pointer;
+}
+
+.enterOtp {
+    vertical-align: top;
+    padding-left: 25px;
+    color: #231F20;
+   
+}
+
+.infoText {
+    color: #231F20;
+    margin-top: 58px;
+    display: inline-block;
+    width: 335px;
+    line-height: 35px;
+}
+
+.partitioned {
+    padding-left: 15px;
+    letter-spacing: 42px;
+    border: 0;
+    background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 90px 2px;
+    background-repeat: repeat-x;
+    background-position-x: 55px;
+    width: 319px;
+    margin-top: 80px;
+}
+
+.otpNotRecived {
+    margin-top: 36px;
+    color: #6A6A6A;
+}
+
+.otpOnCall {
+    margin-top: 32px;
+    color: #2F2F2F
+}
+
+.troubleLogging {
+    margin-top: 126px;
+    color: #6A6A6A;
+}
+
+/* new registration section */
+.newRegistrationHeader {
+    text-align: left;
+}
+
+form {
+    padding: 10px;
+}
+
+.form-group label {
+    text-align: left;
+    display: block;
+    margin-top: 15px;
+}
+
+.form-group input {
+    text-align: left;
+    display: block;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    padding: 7px;
+    color: #6A6A6A;
+    width: 341px;
+}
+
+.invalid-feedback {
+    color: red;
+    text-align: left;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+
+
+.stepsCompletedSection {
+    display: inline-block;
+    width: 360px;
+}
+
+.userDetailSection {
+    background-color: #F7F7F7;
+    display: inline-block;
+    width: calc(100% - 360px)
+}
+
+
+ul {
+    counter-reset: section;
+    list-style: none;
+    text-align: left;
+    padding-left: 54px;
+  }
+  
+  li {
+    margin: 0 0 32px 0;
+    line-height: 25px;
+  }
+  
+  li:before {
+    content: counter(section);
+    counter-increment: section;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 17px 0 0;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+    text-align: center;
+  }
+
+  li.noBefore:before {
+      content: "\2713";
+      width: 25px;
+      height: 25px;
+      border: 2px solid #30CD66;
+      color: #30CD66;
+  }
