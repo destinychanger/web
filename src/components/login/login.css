@@ -1,8 +1,14 @@
 .loginContainer {
-    background: url(../../assets/img/background.png) no-repeat center center fixed;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url(../../assets/img/background.png);
     min-height:100%;
-  /* background:linear-gradient(0deg, rgba(94, 90, 92, 0.3), rgba(70, 67, 69, 0.3)), url(../../assets/img/background.png); */
-  
+    
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* css for sign-in and new-registration page*/
@@ -18,14 +24,14 @@
     right: 0;
     overflow: auto;
     border-radius: 6px;
-    padding: 20px;
+    padding: 24px;
 }
 
 .grytLogo {
     display: block;
     margin: auto;
     margin-top: 28px;
-    height: 140px;
+    height: 163px;
 }
 
 #countryCode {
@@ -46,7 +52,7 @@
     border-bottom-style: groove;
     padding: 10px;
     color: #6A6A6A;
-    margin-top: 30px;
+    margin-top: 48px;
   }
 
 .continueButton {
@@ -67,7 +73,9 @@
     color: #6A6A6A;
     letter-spacing: 0;
     text-align: left;
-    margin-top: 30px;
+    margin-top: 32px;
+    width: 302px;
+    padding-left: 10px;
 
 }
 
@@ -79,17 +87,17 @@
 .signInWith {
     color: #2F2F2F;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 58px;
 }
 
 .signVia {
     display: inline-block;
-    padding: 10px;
+    padding: 7px;
     cursor: pointer;
-    margin-top: 17px;
+    margin-top: 9px;
 }
 .newRegister {
-    margin-top: 30px;
+    margin-top: 47px;
     color: #919191;
 }
 
@@ -114,8 +122,8 @@
     color: #231F20;
     margin-top: 58px;
     display: inline-block;
-    width: 335px;
-    line-height: 35px;
+    width: 304px;
+    line-height: 25px;
 }
 
 .partitioned {
@@ -128,7 +136,7 @@
     background-repeat: repeat-x;
     background-position-x: 55px;
     width: 319px;
-    margin-top: 80px;
+    margin-top: 115px;
 }
 
 .otpNotRecived {
@@ -147,18 +155,22 @@
 }
 
 /* new registration section */
+
 .newRegistrationHeader {
     text-align: left;
 }
 
 form {
-    padding: 10px;
+    padding: 24px 0 0 8px;
+    width: 329px;
 }
 
 .form-group label {
     text-align: left;
     display: block;
-    margin-top: 15px;
+    margin-top: 24px;
+    width: 329px;
+    height: 19px;
 }
 
 .form-group input {
@@ -168,9 +180,21 @@ form {
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: groove;
-    padding: 7px;
+    padding: 8px 0 4px 0;
     color: #6A6A6A;
-    width: 341px;
+    width: 329px;
+}
+
+.newRegistrationSection .termsCondition {
+    margin-top: 18px;
+}
+
+.newRegistrationSection .continueButton{
+    margin-top: 52px
+}
+
+.newRegistrationSection .newRegister {
+    margin-top: 24px
 }
 
 .invalid-feedback {
@@ -181,34 +205,44 @@ form {
     margin-top: 5px;
 }
 
+/* User Detail Section */
 
+.userDetailSection {
+    height: 100%;
 
-
+}
 .stepsCompletedSection {
     display: inline-block;
     width: 360px;
+    vertical-align: top;
+    text-align: left;
+    min-height: 100%;
 }
-
-.userDetailSection {
+    
+    .userDetailSection {
     background-color: #F7F7F7;
     display: inline-block;
-    width: calc(100% - 360px)
-}
-
-
-ul {
+    width: calc(100% - 360px);
+    min-height: 100%;
+    }
+    
+    .grytLogoSmall {
+    margin-top: 48px;
+    padding-left: 47px;
+    }
+    
+    ul {
     counter-reset: section;
     list-style: none;
     text-align: left;
-    padding-left: 54px;
-  }
-  
-  li {
+    padding-left: 47px;
+    margin-top: 80px;
+    }
+    li {
     margin: 0 0 32px 0;
     line-height: 25px;
-  }
-  
-  li:before {
+    }
+    li:before {
     content: counter(section);
     counter-increment: section;
     display: inline-block;
@@ -218,12 +252,13 @@ ul {
     border: 1px solid #ccc;
     border-radius: 100%;
     text-align: center;
-  }
-
-  li.noBefore:before {
-      content: "\2713";
-      width: 25px;
-      height: 25px;
-      border: 2px solid #30CD66;
-      color: #30CD66;
-  }
+    }
+    
+    li.noBefore:before {
+    content: "\2713";
+    width: 25px;
+    height: 25px;
+    border: 2px solid #30CD66;
+    color: #30CD66;
+    min-height: 100%;
+    }

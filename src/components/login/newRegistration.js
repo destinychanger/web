@@ -64,8 +64,11 @@ class NewRegistration extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className="newRegistrationSection">
           <div className="stepsCompletedSection">
+            <div className="grytLogoSmall" >
+              <img src={require('../../assets/img/grytLogoSmall.svg')} alt="Gryt-Logo"/>
+            </div>
             <ul>
               <li className="noBefore">BASIC INFORMATION</li>
               <li>EXPERIENCE</li>
@@ -90,11 +93,7 @@ class NewRegistration extends Component {
                         country_code: Yup.string()
                         .required('Last Name is required'),
                         location: Yup.string()
-                        .required('Last Name is required'),
-                       
-                   
-                      
-                     
+
                       
                 })}
                 onSubmit={fields => {
@@ -104,7 +103,11 @@ class NewRegistration extends Component {
                 {({ errors, values, touched, setFieldValue}) => (
                     <Form>
                         { this.state.count == 1 &&
+                       
                         <div>
+                           <div className="formHeader">
+                            Set up your GRYT presence
+                          </div>
                           <div className="form-group">
                            <label htmlFor="first_name">Name</label>
                            <Field  placeholder="enter name" name="first_name" type="text" className={'form-control' + (errors.first_name && touched.first_name ? ' is-invalid' : '')} />
@@ -121,7 +124,11 @@ class NewRegistration extends Component {
                             <ErrorMessage name="location" component="div" className="invalid-feedback" />
                           </div>
                           <div className="form-group">
-                            <label htmlFor="photo">File upload</label>
+                            <label htmlFor="photo">Upload picture
+                              <div>
+                              Adding a photo helps people recognise you
+                              </div>
+                            </label>
                             <input id="photo" name="photo" type="file" onChange={(event) => {
                               setFieldValue("file", event.currentTarget.files[0]);
                             }} className="form-control" />
@@ -131,18 +138,18 @@ class NewRegistration extends Component {
                         }
 
                       
-                           <div className="form-group">
+                           {/* <div className="form-group">
                               <button type="submit"  className="continueButton nextStepforOtp fontSemiBold fontSize14">Save</button>
-                          </div>
-                        
+                          </div> */}
+                        <button className="back" onClick={this.previous}>Back</button>
+            
+             
+                       <button className="next" onClick={this.next}>Next</button>
                     </Form>
                 )}
               </Formik>
-            <button onClick={this.previous}>Previous</button>
-            {
-              this.state.count !== 4 &&
-              <button onClick={this.next}>Next</button>
-            }
+            
+            
             
             
           </div>

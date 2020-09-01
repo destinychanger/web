@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --mode=development",
     "build": "webpack --mode=production",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --port 3000"
   },
   "author": "sanket",
   "license": "MIT",
@@ -24,12 +24,15 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@mux/mux-node": "^3.0.2",
+    "@mux/upchunk": "^2.0.0",
     "@svgr/webpack": "^5.4.0",
     "chokidar": "^3.4.2",
     "file-loader": "^6.0.0",
     "formik": "^2.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hls-player": "^1.1.0",
     "yup": "^0.29.3"
   }
 }

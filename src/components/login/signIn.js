@@ -17,9 +17,43 @@ class SignIn extends Component {
   }
 
   otpSectionLoad = () => {
+    // var fields = {
+    //   "mobile_number": "9028622111",
+    //   "country_code": "+91"
+    // }
+    // const requestOptions = {
+    //   method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'       
+    //     },
+    //     body: JSON.stringify(fields)
+    // };
+    // fetch('https://api.gryt.fit/api/v1/otp/request-otp/', requestOptions)
+    // .then(response => {
+    //   this.setState({
+    //     numberSection : false,
+    //     otpSection : true,
+    //   })
+    // })
+    this.setState({
+      numberSection : false,
+      otpSection : true,
+    })
+  }
+
+  numberSectionLoad = () => {
+   
+    this.setState({
+      numberSection : true,
+      otpSection : false,
+      newRegistration : false
+    })
+  }
+  validateLogin = () => {
     var fields = {
-      "mobile_number": "9574018706",
-      "country_code": "+91"
+      "mobile_number": "9028622111",
+      "country_code": "+91",
+      "otp": "842462"
     }
     const requestOptions = {
       method: 'POST',
@@ -28,20 +62,9 @@ class SignIn extends Component {
         },
         body: JSON.stringify(fields)
     };
-    fetch('https://api.gryt.fit/api/v1/otp/request-otp/', requestOptions)
+    fetch('https://api.gryt.fit/api/v1/login', requestOptions)
     .then(response => {
-      this.setState({
-        numberSection : false,
-        otpSection : true,
-      })
-    })
-  }
-
-  numberSectionLoad = () => {
-    this.setState({
-      numberSection : true,
-      otpSection : false,
-      newRegistration : false
+      console.log(response)
     })
   }
 
@@ -83,7 +106,7 @@ class SignIn extends Component {
               Please enter the code we just sent to (+91) 7619149297 to proceed
             </div>
             <input className="partitioned" type="text" maxLength="4" />
-            <button className="continueButton fontSemiBold fontSize14">Continue</button>
+            <button className="continueButton fontSemiBold fontSize14" onClick={this.validateLogin}>Continue</button>
             <div className="otpNotRecived fontMedium fontSize12">Didn’t receive OTP? <span className="highlightColor">RESEND</span></div>
             <div className="otpOnCall fontMedium fontSize10">Get OTP on call</div>
             <div className="troubleLogging fontMedium fontSize12">Having trouble logging in?</div>

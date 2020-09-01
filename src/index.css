@@ -41,3 +41,7 @@ html {
 .fontSize14 {
   font-size: 14px;
 }
+
+textarea:focus, input:focus {
+  outline: none;
+}
