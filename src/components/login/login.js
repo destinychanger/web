@@ -8,7 +8,7 @@ class Login extends Component {
     return (
       <div className="loginContainer">
           <SignIn/>
-          <div>"sanet"</div>
+          <div>"sanet shah"</div>
           {/* <NewRegistration/> */}
       </div>
     );
